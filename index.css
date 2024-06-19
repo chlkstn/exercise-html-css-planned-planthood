@@ -65,6 +65,7 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 2fr 1fr;
+  box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.322);
 
   nav {
     display: none;
@@ -117,13 +118,86 @@ header {
   grid-row: 2;
 }
 
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 8px;
+}
+
+/* Cards */
+
+.plantcard {
+  width: 175px;
+  height: 220px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.199);
+
+  figure {
+    width: 175px;
+    height: 160px;
+    background-color: rgb(5, 217, 255);
+    background-size: 200px;
+
+    img {
+      width: 63px;
+    }
+  }
+
+  .card-info {
+    position: relative;
+    display: block;
+
+    h3 {
+      position: absolute;
+      top: 5px;
+      left: 10px;
+
+      font-size: 14px;
+    }
+
+    h4 {
+      position: absolute;
+      font-size: 10px;
+      top: 5px;
+      right: 10px;
+      line-height: 14px;
+    }
+
+    p {
+      position: absolute;
+      font-size: 10px;
+      color: gray;
+      top: 35px;
+      left: 10px;
+    }
+
+    button {
+      position: absolute;
+
+      width: 13px;
+      height: 16px;
+      font-size: 0;
+      top: 35px;
+      right: 10px;
+    }
+  }
+}
+
+/* ids for bg images*/
+
+#tomato {
+  background-image: url(assets/Tomatoes2.png);
+}
+
+/* Tidigare */
+
 .previous {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.roundfigure {
+.circle {
   background-color: var(--green);
   border-radius: 200rem;
   width: 16rem;
