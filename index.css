@@ -19,6 +19,15 @@ img {
   margin-right: auto;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 button {
   background-color: var(--green);
   color: white;
@@ -37,14 +46,16 @@ button {
 
 h1 {
   color: var(--green);
-  font-size: 2rem;
+  font-size: 24px;
   font-family: "Maven Pro", sans-serif;
+  font-weight: 500;
   font-weight: 500;
 }
 
 h2 {
   font-family: sans-serif;
-  font-size: 18px;
+  font-size: 16px;
+  color: #1e1e1e;
 }
 
 p {
@@ -59,25 +70,46 @@ p {
   height: 100vh;
   width: 100vw;
   text-align: center;
+  row-gap: 1.5rem;
 }
+
+/*Header */
 
 header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 2fr 1fr;
   box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.322);
+  height: 582px;
 
   nav {
     display: none;
   }
 
   #header-image1 {
+    position: relative;
     background-image: url(assets/growth.png);
     background-position: center;
     background-size: cover;
     grid-row: 1;
     grid-column-start: 1;
     grid-column-end: 3;
+
+    .material-symbols-outlined {
+      color: white;
+      font-size: 60px;
+      box-shadow: 4px 4px 4px black;
+      border: solid;
+      position: absolute;
+      right: 20px;
+      top: 5px;
+    }
+
+    img {
+      position: absolute;
+      left: 25%;
+      top: 25%;
+    }
   }
 
   #header-image2 {
@@ -96,10 +128,10 @@ header {
     width: 15%;
     margin-left: 80%;
     margin-top: 2%;
+    box-shadow: 5px 5px black;
   }
 
   img {
-    display: block;
     width: 50%;
 
     margin-top: 2rem;
@@ -110,37 +142,54 @@ header {
   }
 }
 
+/* Season*/
+
 .season {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 
   grid-row: 2;
+
+  p {
+    margin-top: -10px;
+  }
+
+  #line {
+    color: var(--green);
+    font-weight: 900px;
+  }
 }
+
+/*  Gallery */
 
 .gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto;
-  gap: 8px;
+  grid-template-rows: 1fr 1fr 1fr;
+
+  gap: 10px;
 }
 
 /* Cards */
 
 .plantcard {
-  width: 175px;
+  width: 100%;
   height: 220px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.199);
+  justify-self: center;
+  align-self: center;
 
   figure {
-    width: 175px;
+    width: 100%;
     height: 160px;
-    background-color: rgb(5, 217, 255);
-    background-size: 200px;
 
-    img {
-      width: 63px;
-    }
+    background-size: 200px;
+    background-position: 0px, -400px;
+  }
+
+  img {
+    width: 64px;
   }
 
   .card-info {
@@ -149,7 +198,7 @@ header {
 
     h3 {
       position: absolute;
-      top: 5px;
+      top: 6px;
       left: 10px;
 
       font-size: 14px;
@@ -158,9 +207,9 @@ header {
     h4 {
       position: absolute;
       font-size: 10px;
-      top: 5px;
+      top: 6px;
       right: 10px;
-      line-height: 14px;
+      line-height: 16.5px;
     }
 
     p {
@@ -171,19 +220,21 @@ header {
       left: 10px;
     }
 
-    button {
-      position: absolute;
+    .remove-button {
+      display: none;
+    }
 
-      width: 13px;
-      height: 16px;
-      font-size: 0;
-      top: 35px;
-      right: 10px;
+    .material-symbols-outlined {
+      position: absolute;
+      color: rgb(161, 2, 2);
+
+      top: 30px;
+      right: 5px;
     }
   }
 }
 
-/* ids for bg images*/
+/* ids for the cards*/
 
 #tomato {
   background-image: url(assets/Tomatoes2.png);
@@ -194,10 +245,17 @@ header {
 .previous {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
+
+  p {
+    margin-bottom: -5px;
+    margin-top: -5px;
+    text-align: center;
+  }
 }
 
 .circle {
+  display: flex;
   background-color: var(--green);
   border-radius: 200rem;
   width: 16rem;
@@ -214,22 +272,56 @@ footer {
   background-image: url(assets/footerBg.png);
   background-position: center;
   background-size: cover;
+  margin-top: 2rem;
+  height: 800px;
 
   figure {
-    padding: 2rem 1rem 4rem 1rem;
+    position: relative;
+
+    height: 400px;
+    padding-top: 50px;
+    grid-row: 1;
   }
 
   article {
+    position: relative;
     background-color: rgba(0, 0, 0, 0.726);
     color: white;
-    padding: 2rem 1rem 4rem 1rem;
+
+    height: 400px;
+    grid-row: 2;
 
     h2 {
-      margin-top: 7rem;
+      color: white;
+      margin-top: 200px;
+      font-size: 30px;
+      font-weight: 100;
     }
+
+    .material-symbols-outlined {
+    }
+  }
+
+  #mail {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+  }
+
+  #phone {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
   }
 
   a {
     background-color: white;
+    padding: 20px;
+    grid-row: 3;
+
+    font-family: sans-serif;
+    text-decoration: none;
+    font-size: 12px;
+    color: black;
   }
 }
