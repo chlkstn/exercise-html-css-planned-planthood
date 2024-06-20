@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Planned Planthood</title>
     <link rel="stylesheet" href="index.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,13 +20,9 @@
   <body>
     <div class="wrapper">
       <header>
-        
-
         <figure id="header-image1">
-          <span class="material-symbols-outlined">
-            menu
-            </span>
-          
+          <span id="burger" class="material-symbols-outlined"> menu </span>
+
           <img src="assets/Logo.svg" alt="seedbg" />
         </figure>
         <figure id="header-image2">
@@ -44,7 +41,6 @@
       <main>
         <h1>PLANNED PLANTHOOD</h1>
         <section class="season">
-          
           <h2>Säsong att så</h2>
           <p>
             Våren är äntligen här i kollektivet! Lorem ipsum dolor sit amet
@@ -55,13 +51,13 @@
           <figure class="circle">
             <img src="assets/Vectorseedpackage.svg" alt="seedimage" />
           </figure>
-          <div id="line"> _________________________</div>
+          <div id="line">_________________________</div>
         </section>
 
         <h2>Våra planerade planteringar:</h2>
         <section class="gallery">
           <article class="plantcard">
-            <figure id="tomato">
+            <figure id="cucumber">
               <img src="assets/plant.svg" alt="Plantimage" />
             </figure>
             <section class="card-info">
@@ -77,7 +73,43 @@
               <img src="assets/plant.svg" alt="Plantimage" />
             </figure>
             <section class="card-info">
-              <h3>Gurka</h3>
+              <h3>Tomat</h3>
+              <h4>24 april 2024</h4>
+              <p>Rico Coalia</p>
+              <span class="material-symbols-outlined"> delete </span>
+              <button class="remove-button">Ta bort</button>
+            </section>
+          </article>
+          <article class="plantcard">
+            <figure id="tomato2">
+              <img src="assets/plant.svg" alt="Plantimage" />
+            </figure>
+            <section class="card-info">
+              <h3>Tomat</h3>
+              <h4>15 april 2024</h4>
+              <p>emma på4an</p>
+              <span class="material-symbols-outlined"> delete </span>
+              <button class="remove-button">Ta bort</button>
+            </section>
+          </article>
+          <article class="plantcard">
+            <figure id="turnip">
+              <img src="assets/plant.svg" alt="Plantimage" />
+            </figure>
+            <section class="card-info">
+              <h3>Turnip</h3>
+              <h4>15 april 2024</h4>
+              <p>latinus e4</p>
+              <span class="material-symbols-outlined"> delete </span>
+              <button class="remove-button">Ta bort</button>
+            </section>
+          </article>
+          <article class="plantcard">
+            <figure id="sugarpeas">
+              <img src="assets/plant.svg" alt="Plantimage" />
+            </figure>
+            <section class="card-info">
+              <h3>Sockerärtor</h3>
               <h4>15 april 2024</h4>
               <p>Rico Coalia</p>
               <span class="material-symbols-outlined"> delete </span>
@@ -85,49 +117,13 @@
             </section>
           </article>
           <article class="plantcard">
-            <figure id="tomato">
+            <figure id="crop">
               <img src="assets/plant.svg" alt="Plantimage" />
             </figure>
             <section class="card-info">
-              <h3>Gurka</h3>
+              <h3>Squash</h3>
               <h4>15 april 2024</h4>
-              <p>Rico Coalia</p>
-              <span class="material-symbols-outlined"> delete </span>
-              <button class="remove-button">Ta bort</button>
-            </section>
-          </article>
-          <article class="plantcard">
-            <figure id="tomato">
-              <img src="assets/plant.svg" alt="Plantimage" />
-            </figure>
-            <section class="card-info">
-              <h3>Gurka</h3>
-              <h4>15 april 2024</h4>
-              <p>Rico Coalia</p>
-              <span class="material-symbols-outlined"> delete </span>
-              <button class="remove-button">Ta bort</button>
-            </section>
-          </article>
-          <article class="plantcard">
-            <figure id="tomato">
-              <img src="assets/plant.svg" alt="Plantimage" />
-            </figure>
-            <section class="card-info">
-              <h3>Gurka</h3>
-              <h4>15 april 2024</h4>
-              <p>Rico Coalia</p>
-              <span class="material-symbols-outlined"> delete </span>
-              <button class="remove-button">Ta bort</button>
-            </section>
-          </article>
-          <article class="plantcard">
-            <figure id="tomato">
-              <img src="assets/plant.svg" alt="Plantimage" />
-            </figure>
-            <section class="card-info">
-              <h3>Gurka</h3>
-              <h4>15 april 2024</h4>
-              <p>Rico Coalia</p>
+              <p>Perra J</p>
               <span class="material-symbols-outlined"> delete </span>
               <button class="remove-button">Ta bort</button>
             </section>
@@ -152,15 +148,24 @@
 
         <article>
           <h2>Vi hörs!</h2>
-          
-          <p id ="phone"><span class="material-symbols-outlined"> call </span>0701-234567</p>
-          
-          <p id = "mail">mail@mail.se<span class="material-symbols-outlined"> mail </span></p>
+
+          <p id="phone">
+            <span id="phone-symbol" class="material-symbols-outlined">
+              call </span
+            >0701-234567
+          </p>
+
+          <p id="mail">
+            mail@mail.se<span
+              id="mail-symbol"
+              class="material-symbols-outlined"
+            >
+              mail
+            </span>
+          </p>
         </article>
 
-        <a href="X">Till toppen av sidan</a> 
-
-        
+        <a href="X">Till toppen av sidan</a>
       </footer>
     </div>
   </body>

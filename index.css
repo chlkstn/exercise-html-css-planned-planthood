@@ -9,15 +9,21 @@
   padding: 0;
 }
 
-img {
-  width: 50%;
+/* wrapper for the layout. Devided into header, content and footer*/
 
-  margin-top: 3rem;
-  margin-bottom: auto;
-
-  margin-left: auto;
-  margin-right: auto;
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  row-gap: 1.5rem;
 }
+
+/* centralized images*/
+
+/* creating whitespace to the content*/
 
 main {
   display: flex;
@@ -26,7 +32,10 @@ main {
 
   margin-left: 10px;
   margin-right: 10px;
+  grid-row: 2;
 }
+
+/* the generic button */
 
 button {
   background-color: var(--green);
@@ -63,16 +72,6 @@ p {
   font-size: 14px;
 }
 
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  height: 100vh;
-  width: 100vw;
-  text-align: center;
-  row-gap: 1.5rem;
-}
-
 /*Header */
 
 header {
@@ -80,13 +79,15 @@ header {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 2fr 1fr;
   box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.322);
-  height: 582px;
+
+  grid-row: 1;
 
   nav {
     display: none;
   }
 
   #header-image1 {
+    aspect-ratio: 1/1;
     position: relative;
     background-image: url(assets/growth.png);
     background-position: center;
@@ -95,11 +96,11 @@ header {
     grid-column-start: 1;
     grid-column-end: 3;
 
-    .material-symbols-outlined {
-      color: white;
+    #burger {
+      color: rgb(255, 255, 255);
       font-size: 60px;
-      box-shadow: 4px 4px 4px black;
-      border: solid;
+      text-shadow: rgba(0, 0, 0, 0.466) 2px 5px 5px;
+
       position: absolute;
       right: 20px;
       top: 5px;
@@ -113,12 +114,14 @@ header {
   }
 
   #header-image2 {
+    aspect-ratio: 1;
     background-color: var(--brown);
     grid-row: 2;
     grid-column: 1;
   }
 
   #header-image3 {
+    aspect-ratio: 1;
     background-color: var(--green);
     grid-row: 2;
     grid-column: 2;
@@ -174,22 +177,28 @@ header {
 /* Cards */
 
 .plantcard {
-  width: 100%;
+  width: 175px;
   height: 220px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.199);
   justify-self: center;
-  align-self: center;
 
   figure {
+    display: flex;
+
+    justify-content: center;
+    justify-items: center;
+    flex-wrap: wrap;
     width: 100%;
     height: 160px;
+    background-repeat: no-repeat;
 
-    background-size: 200px;
-    background-position: 0px, -400px;
+    background-size: 100%;
+    background-position: 0px, 0px;
   }
 
   img {
-    width: 64px;
+    max-width: 40%;
+    height: auto;
   }
 
   .card-info {
@@ -240,6 +249,26 @@ header {
   background-image: url(assets/Tomatoes2.png);
 }
 
+#tomato2 {
+  background-image: url(assets/Tomatoes.png);
+}
+
+#turnip {
+  background-image: url(assets/turnip.png);
+}
+
+#crop {
+  background-image: url(assets/crop.png);
+}
+
+#cucumber {
+  background-image: url(assets/cucumber.png);
+}
+
+#sugarpeas {
+  background-image: url(assets/sugarpeas.png);
+}
+
 /* Tidigare */
 
 .previous {
@@ -260,8 +289,17 @@ header {
   border-radius: 200rem;
   width: 16rem;
   height: 16rem;
+  justify-self: center;
 
   align-self: center;
+  justify-content: center;
+  justify-items: center;
+  flex-wrap: wrap;
+
+  img {
+    max-width: 40%;
+    height: auto;
+  }
 }
 
 footer {
@@ -274,9 +312,11 @@ footer {
   background-size: cover;
   margin-top: 2rem;
   height: 800px;
+  grid-row: 3;
 
   figure {
     position: relative;
+    width: auto;
 
     height: 400px;
     padding-top: 50px;
@@ -308,6 +348,18 @@ footer {
     bottom: 20px;
   }
 
+  #phone-symbol {
+    position: relative;
+    top: 6px;
+    right: 4px;
+  }
+
+  #mail-symbol {
+    position: relative;
+    top: 6px;
+    left: 4px;
+  }
+
   #phone {
     position: absolute;
     left: 20px;
@@ -323,5 +375,117 @@ footer {
     text-decoration: none;
     font-size: 12px;
     color: black;
+  }
+}
+
+@media (min-width: 600px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    height: 100vh;
+    width: 80%;
+
+    row-gap: 5rem;
+    margin-left: 10%;
+  }
+
+  header {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5fr 5fr 1fr;
+    box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.322);
+    height: 550px;
+
+    grid-row: 1;
+
+    nav {
+      display: flex;
+      flex-direction: row;
+
+      grid-row-start: 3;
+      grid-row-end: 4;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      height: 60px;
+      width: 100%;
+      justify-content: center;
+
+      justify-self: center;
+      align-self: center;
+      gap: 200px;
+      background-color: #484e4d;
+
+      a {
+        font-size: 20px;
+        font-family: sans-serif;
+        font-weight: 900px;
+        text-decoration: none;
+        align-self: center;
+        color: var(--green);
+      }
+    }
+
+    #header-image1 {
+      height: 540px;
+      aspect-ratio: auto;
+      position: relative;
+      background-image: url(assets/growth.png);
+      background-position: center;
+      background-size: cover;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      grid-column-start: 1;
+      grid-column-end: 2;
+
+      #burger {
+        display: none;
+      }
+
+      img {
+        width: 40%;
+        position: absolute;
+        left: 25%;
+        top: 25%;
+      }
+    }
+
+    #header-image2 {
+      height: 270px;
+      aspect-ratio: auto;
+
+      background-color: var(--brown);
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row: 1;
+    }
+
+    #header-image3 {
+      height: 270px;
+      aspect-ratio: auto;
+
+      background-color: var(--green);
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row: 2;
+    }
+
+    #menu-icon {
+      width: 15%;
+      margin-left: 80%;
+      margin-top: 2%;
+      box-shadow: 5px 5px black;
+    }
+
+    img {
+      width: 150px;
+
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
