@@ -270,11 +270,11 @@ header {
 /* ids for the cards*/
 
 #tomato {
-  background-image: url(assets/Tomatoes2.png);
+  background-image: url(assets/tomato_small.jpg);
 }
 
 #tomato2 {
-  background-image: url(assets/Tomatoes.png);
+  background-image: url(assets/Tomatoes2.png);
 }
 
 #turnip {
