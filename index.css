@@ -11,13 +11,16 @@
 
 /* wrapper for the layout. Devided into header, content and footer*/
 
+.body {
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto;
-  height: 100vh;
+  grid-template-rows: auto;
+  height: auto;
   width: 100vw;
-  text-align: center;
+
   row-gap: 1.5rem;
 }
 
@@ -30,8 +33,8 @@ main {
   flex-direction: column;
   gap: 40px;
 
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 4%;
+  margin-right: 4%;
   grid-row: 2;
 }
 
@@ -44,13 +47,15 @@ button {
   align-self: center;
   text-align: center;
   border-radius: 0.5rem;
-  height: 2rem;
+  height: 2.5rem;
 
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   box-shadow: 0.1rem 0.2rem 5px rgb(92, 90, 90);
   border-style: none;
   font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 h1 {
@@ -59,12 +64,14 @@ h1 {
   font-family: "Maven Pro", sans-serif;
   font-weight: 500;
   font-weight: 500;
+  text-align: center;
 }
 
 h2 {
   font-family: sans-serif;
   font-size: 16px;
   color: #1e1e1e;
+  text-align: center;
 }
 
 p {
@@ -118,6 +125,7 @@ header {
     background-color: var(--brown);
     grid-row: 2;
     grid-column: 1;
+    text-align: center;
   }
 
   #header-image3 {
@@ -125,6 +133,7 @@ header {
     background-color: var(--green);
     grid-row: 2;
     grid-column: 2;
+    text-align: center;
   }
 
   #menu-icon {
@@ -145,23 +154,35 @@ header {
   }
 }
 
-/* Season*/
+/* info*/
 
-.season {
+.info {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
 
   grid-row: 2;
+  text-align: center;
+
+  h2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
 
   p {
-    margin-top: -10px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
+}
 
-  #line {
-    color: var(--green);
-    font-weight: 900px;
-  }
+#line {
+  color: var(--green);
+
+  text-align: center;
+  border-bottom: var(--green) solid 0.2rem;
+  width: 55%;
+  align-self: center;
+
+  margin-bottom: 1rem;
 }
 
 /*  Gallery */
@@ -177,10 +198,11 @@ header {
 /* Cards */
 
 .plantcard {
-  width: 175px;
-  height: 220px;
+  width: 100%;
+
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.199);
   justify-self: center;
+  aspect-ratio: 1.6/2.1;
 
   figure {
     display: flex;
@@ -188,11 +210,12 @@ header {
     justify-content: center;
     justify-items: center;
     flex-wrap: wrap;
-    width: 100%;
-    height: 160px;
+
+    aspect-ratio: 1/1;
+
     background-repeat: no-repeat;
 
-    background-size: 100%;
+    background-size: 150%;
     background-position: 0px, 0px;
   }
 
@@ -204,6 +227,7 @@ header {
   .card-info {
     position: relative;
     display: block;
+    font-family: sans-serif;
 
     h3 {
       position: absolute;
@@ -269,27 +293,15 @@ header {
   background-image: url(assets/sugarpeas.png);
 }
 
-/* Tidigare */
-
-.previous {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-
-  p {
-    margin-bottom: -5px;
-    margin-top: -5px;
-    text-align: center;
-  }
-}
-
 .circle {
   display: flex;
   background-color: var(--green);
   border-radius: 200rem;
+  aspect-ratio: 1/1;
   width: 16rem;
-  height: 16rem;
+  height: auto;
   justify-self: center;
+  flex: 1;
 
   align-self: center;
   justify-content: center;
@@ -312,14 +324,17 @@ footer {
   background-size: cover;
   margin-top: 2rem;
   height: 800px;
+
   grid-row: 3;
+  text-align: center;
 
   figure {
     position: relative;
     width: auto;
 
     height: 400px;
-    padding-top: 50px;
+    padding-top: 100px;
+
     grid-row: 1;
   }
 
@@ -379,15 +394,46 @@ footer {
 }
 
 @media (min-width: 600px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: rgb(236, 231, 231);
+  }
+
+  .main {
+  }
+
   .wrapper {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    height: 100vh;
-    width: 80%;
+    grid-template-rows: auto;
+    height: auto;
+    max-width: 1000px;
+    background-color: white;
+    border: solid rgb(226, 226, 226);
 
-    row-gap: 5rem;
-    margin-left: 10%;
+    row-gap: 2rem;
+    margin-bottom: 10rem;
+  }
+
+  button {
+    height: 3.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 14px;
   }
 
   header {
@@ -395,8 +441,8 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 5fr 5fr 1fr;
-    box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.322);
-    height: 550px;
+    box-shadow: 0rem 0.5rem 0rem 0rem 0.6rem rgba(0, 0, 0, 0.322);
+    height: 600px;
 
     grid-row: 1;
 
@@ -414,16 +460,17 @@ footer {
 
       justify-self: center;
       align-self: center;
-      gap: 200px;
-      background-color: #484e4d;
+      gap: 18%;
+      background-color: #ffffff;
 
       a {
         font-size: 20px;
-        font-family: sans-serif;
-        font-weight: 900px;
+        font-family: "maven pro";
+
+        font-weight: 600;
         text-decoration: none;
         align-self: center;
-        color: var(--green);
+        color: #055647;
       }
     }
 
@@ -455,7 +502,6 @@ footer {
       height: 270px;
       aspect-ratio: auto;
 
-      background-color: var(--brown);
       grid-column-start: 2;
       grid-column-end: 3;
       grid-row: 1;
@@ -465,27 +511,222 @@ footer {
       height: 270px;
       aspect-ratio: auto;
 
-      background-color: var(--green);
       grid-column-start: 2;
       grid-column-end: 3;
       grid-row: 2;
     }
 
-    #menu-icon {
-      width: 15%;
-      margin-left: 80%;
-      margin-top: 2%;
-      box-shadow: 5px 5px black;
-    }
-
     img {
-      width: 150px;
+      width: auto;
 
       margin-top: 2rem;
       margin-bottom: 2rem;
 
       margin-left: auto;
       margin-right: auto;
+    }
+  }
+
+  .info {
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    grid-row: 2;
+    justify-content: flex-start;
+    gap: 4rem;
+    padding: 0rem;
+
+    h2 {
+      text-align: left;
+    }
+
+    article {
+      order: 2;
+      max-width: 50%;
+      align-self: center;
+
+      text-align: left;
+      padding: 0rem;
+
+      p {
+        margin-top: 16px;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  #season {
+    button {
+      margin-left: 300px;
+    }
+  }
+
+  #previous {
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    figure {
+      order: 2;
+    }
+
+    article {
+      order: 1;
+    }
+  }
+
+  #line {
+    color: var(--green);
+
+    text-align: center;
+    border-bottom: var(--green) solid 0.2rem;
+    width: 35%;
+    align-self: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    gap: 30px;
+
+    .card-info {
+      position: relative;
+      display: block;
+
+      h3 {
+        position: absolute;
+        top: 6px;
+        left: 10px;
+
+        font-size: 22px;
+      }
+
+      h4 {
+        position: absolute;
+        font-size: 14px;
+        top: 12px;
+        right: 10px;
+        line-height: 16.5px;
+      }
+
+      p {
+        position: absolute;
+        font-size: 14px;
+        color: gray;
+        top: 55px;
+        left: 10px;
+      }
+
+      .remove-button {
+        display: block;
+        position: absolute;
+        background-color: rgb(134, 10, 10);
+        height: 30px;
+        width: 98px;
+        padding: 0;
+        margin: 0;
+
+        top: 45px;
+        right: 8px;
+      }
+
+      .material-symbols-outlined {
+        display: none;
+
+        position: absolute;
+        color: rgb(161, 2, 2);
+
+        top: 30px;
+        right: 5px;
+      }
+    }
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10fr 1fr;
+
+    background-image: url(assets/footerBg.png);
+    background-position: center;
+    background-size: cover;
+    margin-top: 2rem;
+    height: 640px;
+    grid-row: 3;
+    text-align: center;
+
+    figure {
+      position: relative;
+      width: auto;
+
+      height: 600px;
+      padding-top: 40%;
+      grid-row: 1;
+      grid-column: 2;
+    }
+
+    article {
+      position: relative;
+      background-color: rgba(0, 0, 0, 0.726);
+      color: white;
+
+      height: 600px;
+      grid-row: 1;
+      grid-column: 1;
+
+      h2 {
+        color: white;
+        margin-top: 50%;
+        font-size: 50px;
+        font-weight: 100;
+      }
+
+      .material-symbols-outlined {
+      }
+    }
+
+    #mail {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+    }
+
+    #phone-symbol {
+      position: relative;
+      top: 6px;
+      right: 4px;
+    }
+
+    #mail-symbol {
+      position: relative;
+      top: 6px;
+      left: 4px;
+    }
+
+    #phone {
+      position: absolute;
+      left: 20px;
+      bottom: 20px;
+    }
+
+    a {
+      background-color: white;
+      padding: 20px;
+      grid-row: 2;
+      grid-column-start: 1;
+      grid-column-end: 3;
+
+      font-family: sans-serif;
+      text-decoration: none;
+      font-size: 25px;
+      color: black;
     }
   }
 }
